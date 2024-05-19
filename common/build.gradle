@@ -77,7 +77,8 @@ publishing {
                 username System.getenv("MAVEN_USERNAME")
                 password System.getenv("MAVEN_PASSWORD")
             }
-            credentials(PasswordCredentials)authentication {
+            credentials(PasswordCredentials)
+            authentication {
                 create("basic", BasicAuthentication)
             }
         }
