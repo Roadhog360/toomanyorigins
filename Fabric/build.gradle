@@ -32,11 +32,11 @@ loom {
 }
 repositories {
     maven {
-        name = "Pug's Maven"
-        url = 'https://maven.merchantpug.net/releases/'
+        name = "Greenhouse"
+        url = 'https://maven.greenhouseteam.dev/releases/'
     }
     maven {
-        name = "Ladysnake Libs"
+        name = "Ladysnake"
         url = 'https://maven.ladysnake.org/releases/'
     }
     maven {
@@ -143,8 +143,8 @@ publishing {
 
     repositories {
         maven {
-            name = "merchantpug"
-            url = "https://maven.merchantpug.net/releases"
+            name = "greenhouse"
+            url = "https://maven.greenhouseteam.dev/releases"
             credentials(PasswordCredentials)
             authentication {
                 create("basic", BasicAuthentication)
