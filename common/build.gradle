@@ -11,7 +11,7 @@ version = "${rootProject.version}+${minecraft_version}-common"
 repositories {
     maven {
         name = "Greenhouse"
-        url = 'https://maven.greenhouseteam.dev/releases/'
+        url = 'https://maven.greenhouseteam.dev/snapshots/'
     }
     maven {
         name = 'Sponge / Mixin'
@@ -88,6 +88,7 @@ publishing {
 githubRelease {
     if (System.getenv("GITHUB_TOKEN") == null) return
     token = System.getenv("GITHUB_TOKEN")
+    prerelease = true
     owner = gh_owner
     repo = gh_repo
     tagName = "${rootProject.version}+${minecraft_version}"
