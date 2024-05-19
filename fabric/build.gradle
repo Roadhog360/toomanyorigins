@@ -36,7 +36,7 @@ repositories {
         url = 'https://maven.greenhouseteam.dev/releases/'
     }
     maven {
-        name = "Ladysnake Libs"
+        name = "Ladysnake"
         url = 'https://maven.ladysnake.org/releases/'
     }
     maven {
@@ -154,6 +154,7 @@ publishing {
                 username System.getenv("MAVEN_USERNAME")
                 password System.getenv("MAVEN_PASSWORD")
             }
+            credentials(PasswordCredentials)
             authentication {
                 create("basic", BasicAuthentication)
             }
