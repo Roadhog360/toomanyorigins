@@ -1,7 +1,6 @@
 package net.merchantpug.toomanyorigins;
 
-import io.github.apace100.apoli.util.IdentifierAlias;
-import io.github.apace100.apoli.util.NamespaceAlias;
+import io.github.apace100.calio.util.IdentifierAlias;
 import net.merchantpug.toomanyorigins.registry.*;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -23,7 +22,7 @@ public class TooManyOrigins {
         TMOPowers.register();
         TMOSounds.register();
 
-        IdentifierAlias.addNamespaceAlias(MOD_ID, "apugli");
+        IdentifierAlias.GLOBAL.addNamespaceAlias(MOD_ID, "apugli");
     }
     
     public static ResourceLocation asResource(String name) {

@@ -30,7 +30,7 @@ public class ZombifyingStatusEffect extends MobEffect {
         entity.hurt(entity.level().damageSources().source(TMODamageTypes.ZOMBIFICATION), 1.0F);
     }
 
-    public boolean isDurationEffectTick(int duration, int amplifier) {
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
         int k;
         k = 25 >> amplifier;
         if (k > 0) {

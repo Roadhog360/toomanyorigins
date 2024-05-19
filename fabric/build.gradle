@@ -40,6 +40,10 @@ repositories {
         url = 'https://maven.ladysnake.org/releases/'
     }
     maven {
+        name = "Ladysnake (Snapshots)"
+        url = 'https://maven.ladysnake.org/snapshots/'
+    }
+    maven {
         name = "JitPack"
         url = 'https://jitpack.io'
     }
@@ -100,11 +104,9 @@ dependencies {
     //ModMenu
     modImplementation "com.terraformersmc:modmenu:${modmenu_version}"
     //Origins
-    modImplementation "com.github.apace100:origins-fabric:${origins_fabric_version}"
+    modImplementation "io.github.apace100:origins-fabric:${origins_fabric_version}+mc.${minecraft_version}"
     //Apugli
     include(modImplementation("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric"))
-    // MixinExtras
-    implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}"))
     //JSR305
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     //Service

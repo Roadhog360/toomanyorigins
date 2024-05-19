@@ -1,7 +1,7 @@
 package net.merchantpug.toomanyorigins.registry;
 
-import net.merchantpug.toomanyorigins.blocks.WitheredCropBlock;
-import net.merchantpug.toomanyorigins.blocks.WitheredStemBlock;
+import net.merchantpug.toomanyorigins.content.legacy.block.WitheredCropBlock;
+import net.merchantpug.toomanyorigins.content.legacy.block.WitheredStemBlock;
 import net.merchantpug.toomanyorigins.registry.services.RegistrationProvider;
 import net.merchantpug.toomanyorigins.registry.services.RegistryObject;
 import net.merchantpug.toomanyorigins.TooManyOrigins;
@@ -15,8 +15,8 @@ import java.util.function.Supplier;
 public class TMOBlocks {
     private static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registries.BLOCK, TooManyOrigins.MOD_ID);
 
-    public static final RegistryObject<Block> WITHERED_CROP = register("withered_crop", () -> new WitheredCropBlock(() -> TMOItems.WITHERED_CROP_SEEDS.get(), BlockBehaviour.Properties.of().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
-    public static final RegistryObject<Block> WITHERED_STEM = register("withered_stem", () -> new WitheredStemBlock(() -> TMOItems.WITHERED_STEM_SEEDS.get(), BlockBehaviour.Properties.of().noCollission().randomTicks().instabreak().sound(SoundType.STEM)));
+    public static final RegistryObject<Block> WITHERED_CROP = register("withered_crop", () -> new WitheredCropBlock(BlockBehaviour.Properties.of().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+    public static final RegistryObject<Block> WITHERED_STEM = register("withered_stem", () -> new WitheredStemBlock(BlockBehaviour.Properties.of().noCollission().randomTicks().instabreak().sound(SoundType.STEM)));
 
     public static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

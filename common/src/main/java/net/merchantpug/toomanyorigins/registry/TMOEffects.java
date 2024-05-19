@@ -1,12 +1,10 @@
 package net.merchantpug.toomanyorigins.registry;
 
 import net.merchantpug.toomanyorigins.content.effect.ChargedStatusEffect;
-import net.merchantpug.toomanyorigins.content.effect.EndFireStatusEffect;
 import net.merchantpug.toomanyorigins.content.legacy.effect.ZombifyingStatusEffect;
 import net.merchantpug.toomanyorigins.TooManyOrigins;
 import net.merchantpug.toomanyorigins.registry.services.RegistrationProvider;
 import net.merchantpug.toomanyorigins.registry.services.RegistryObject;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -20,9 +18,6 @@ public class TMOEffects {
     public static final RegistryObject<MobEffect> CHARGED = register("charged",
             () -> new ChargedStatusEffect().addAttributeModifier(Attributes.MOVEMENT_SPEED, "c12451f1-b2a4-47aa-88ef-3f11b1b21e5e", 0.20000000298023224D, AttributeModifier.Operation.MULTIPLY_TOTAL));
     public static final RegistryObject<ZombifyingStatusEffect> ZOMBIFYING = register("zombifying", ZombifyingStatusEffect::new);
-
-    @Deprecated(forRemoval = true, since = "1.0.0")
-    public static final RegistryObject<EndFireStatusEffect> END_FIRE = register("end_fire", EndFireStatusEffect::new);
 
     public static void register() {
     }

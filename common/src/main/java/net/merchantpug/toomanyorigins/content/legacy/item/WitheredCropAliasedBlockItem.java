@@ -4,6 +4,7 @@ import net.merchantpug.toomanyorigins.data.LegacyContentRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -22,7 +23,7 @@ public class WitheredCropAliasedBlockItem extends ItemNameBlockItem {
         super(block, settings);
     }
 
-    protected boolean place(BlockPlaceContext context, BlockState state) {
+    public InteractionResult place(BlockPlaceContext context) {
         if (!LegacyContentRegistry.areWitheredCropsEnabled()) {
             if (context.getPlayer() != null) {
                 Player player = context.getPlayer();
@@ -31,9 +32,9 @@ public class WitheredCropAliasedBlockItem extends ItemNameBlockItem {
                 }
                 player.getCooldowns().addCooldown(this, 20);
             }
-            return false;
+            return InteractionResult.PASS;
         }
-        return super.placeBlock(context, state);
+        return super.place(context);
     }
 
     @Override

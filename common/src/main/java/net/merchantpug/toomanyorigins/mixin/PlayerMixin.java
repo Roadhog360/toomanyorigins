@@ -1,6 +1,6 @@
 package net.merchantpug.toomanyorigins.mixin;
 
-import com.llamalad7.mixinextras.injector.WrapWithCondition;
+import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import net.merchantpug.toomanyorigins.platform.Services;
 import net.merchantpug.toomanyorigins.registry.TMOPowers;
 import net.minecraft.world.entity.player.Player;
