@@ -1,3 +1,3 @@
 ### Dependencies
-- Updated Apugli to 2.10.2.
-- Fixed crashes relating to the thunder breath effect cloud. ([#87](https://github.com/MerchantPug/toomanyorigins/issues/87))
+- Updated Apugli to 2.10.3.
+- Fixed /reload errors whilst reloading with the Legacy TMO datapack.

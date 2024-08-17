@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.merchantpug.toomanyorigins.client.particle.CustomDragonBreathParticle;
+import net.merchantpug.toomanyorigins.network.TMOPackets;
 import net.merchantpug.toomanyorigins.registry.TMOBlocks;
 import net.merchantpug.toomanyorigins.registry.TMOEntityTypes;
 import net.merchantpug.toomanyorigins.registry.TMOParticleTypes;
@@ -27,6 +28,8 @@ public class TooManyOriginsFabricClient implements ClientModInitializer {
         EntityRendererRegistry.register(TMOEntityTypes.FIREBALL_AREA_EFFECT_CLOUD.get(), NoopRenderer::new);
 
         ParticleFactoryRegistry.getInstance().register(TMOParticleTypes.CUSTOM_DRAGON_BREATH.get(), CustomDragonBreathParticle.Provider::new);
+
+        TMOPackets.registerS2C();
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             int k = 255;
