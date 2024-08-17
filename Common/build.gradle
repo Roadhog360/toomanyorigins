@@ -11,7 +11,7 @@ version = "${rootProject.version}+${minecraft_version}-common"
 repositories {
     maven {
         name = "Pug's Maven"
-        url = 'https://maven.merchantpug.net/releases/'
+        url = 'https://repo.greenhouse.house/releases/'
     }
     maven {
         name = 'Sponge / Mixin'
@@ -77,9 +77,9 @@ dependencies {
         parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
     }
     // Origins
-    modCompileOnly("com.github.apace100:calio:${calio_fabric_version}") { transitive false }
-    modCompileOnly("com.github.eggohito:apoli:${apoli_fabric_version}") { transitive false }
-    modCompileOnly("com.github.eggohito:origins-fabric:${origins_fabric_version}") { transitive false }
+    modCompileOnly("io.github.apace100:calio:${calio_fabric_version}") { transitive false }
+    modCompileOnly("io.github.apace100:apoli:${apoli_fabric_version}") { transitive false }
+    modCompileOnly("io.github.apace100:origins-fabric:${origins_fabric_version}") { transitive false }
     // Apugli
     modCompileOnly "net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric"
 }
@@ -97,8 +97,8 @@ publishing {
 
     repositories {
         maven {
-            name = "merchantpug"
-            url = "https://maven.merchantpug.net/releases"
+            name = "greenhouse"
+            url = 'https://repo.greenhouse.house/releases/'
             credentials(PasswordCredentials)
             authentication {
                 create("basic", BasicAuthentication)

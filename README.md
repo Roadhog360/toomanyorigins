@@ -23,7 +23,7 @@ Please follow the guide from the [Origins Documentation](https://origins.readthe
 repositories {
     maven {
         name = "Pug's Maven"
-        url = 'https://maven.merchantpug.net/releases/'
+        url = 'https://repo.greenhouse.house/releases/'
     }
 }
 

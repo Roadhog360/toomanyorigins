@@ -49,7 +49,7 @@ repositories {
 
     maven {
         name = "Pug's Maven"
-        url = 'https://maven.merchantpug.net/releases/'
+        url = 'https://repo.greenhouse.house/releases/'
     }
 
     maven { url "https://maven.ryanliptak.com/" }
@@ -195,8 +195,8 @@ publishing {
 
     repositories {
         maven {
-            name = "merchantpug"
-            url = "https://maven.merchantpug.net/releases"
+            name = "greenhouse"
+            url = 'https://repo.greenhouse.house/releases/'
             credentials(PasswordCredentials)
             authentication {
                 create("basic", BasicAuthentication)

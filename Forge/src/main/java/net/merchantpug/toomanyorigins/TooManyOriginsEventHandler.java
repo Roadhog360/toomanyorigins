@@ -26,7 +26,8 @@ public class TooManyOriginsEventHandler {
 
     @SubscribeEvent
     public static void onDatapackSync(OnDatapackSyncEvent event) {
-        TMOPacketHandler.INSTANCE.send(PacketDistributor.PLAYER.with(event::getPlayer), new SyncLegacyContentPacket(LegacyContentRegistry.isDragonFireballEnabled(), LegacyContentRegistry.areWitheredCropsEnabled(), LegacyContentRegistry.isZombifyingEffectEnabled()));
+        PacketDistributor.PacketTarget target = event.getPlayer() != null ? PacketDistributor.PLAYER.with(event::getPlayer) : PacketDistributor.ALL.noArg();
+        TMOPacketHandler.INSTANCE.send(target, new SyncLegacyContentPacket(LegacyContentRegistry.isDragonFireballEnabled(), LegacyContentRegistry.areWitheredCropsEnabled(), LegacyContentRegistry.isZombifyingEffectEnabled()));
     }
 
     @SubscribeEvent
