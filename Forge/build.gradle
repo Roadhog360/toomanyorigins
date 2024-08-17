@@ -38,17 +38,11 @@ repositories {
     maven {
         name = "Ladysnake"
         url = 'https://maven.ladysnake.org/releases/'
-        content {
-            includeGroup "io.github.apace100"
-        }
     }
 
     maven {
         name = "JitPack"
         url = 'https://jitpack.io'
-        content {
-            excludeGroup "io.github.edwinmindcraft"
-        }
     }
 
     maven { url "https://maven.blamejared.com" }

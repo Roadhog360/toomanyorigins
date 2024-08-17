@@ -1,3 +1,5 @@
 ### Dependencies
-- Updated Apugli to 2.10.2.
-- Fixed crashes relating to the thunder breath effect cloud. ([#87](https://github.com/MerchantPug/toomanyorigins/issues/87))
+- Updated Apugli to 2.10.4.
+- [FABRIC] Fixed clientsided packets being left unregistered.
+- [FORGE] Fixed a crash upon using /reload.
+- [FORGE] Fixed Calming Aura not functioning properly.

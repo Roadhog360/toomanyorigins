@@ -6,9 +6,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public record SyncLegacyContentPacket(boolean dragonfireball,
                                       boolean witheredCrops,
                                       boolean zombifying) implements TMOPacketS2C {
@@ -30,8 +27,12 @@ public record SyncLegacyContentPacket(boolean dragonfireball,
 
     @Override
     public void handle() {
-        Minecraft.getInstance().execute(() -> {
-            LegacyContentRegistry.setRecord(dragonfireball, witheredCrops, zombifying);
+        // Forge could bark up a tree if we lambda-ise this
+        Minecraft.getInstance().execute(new Runnable() {
+            @Override
+            public void run() {
+                LegacyContentRegistry.setRecord(dragonfireball, witheredCrops, zombifying);
+            }
         });
     }
 

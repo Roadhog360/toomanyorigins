@@ -41,6 +41,10 @@ public class TooManyOriginsEventHandler {
     public static class ForgeEventBusHandler {
         @SubscribeEvent
         public static void onDatapackSync(OnDatapackSyncEvent event) {
+            if (event.getPlayer() == null) {
+                TMOPacketHandler.INSTANCE.send(PacketDistributor.ALL.noArg(), new SyncLegacyContentPacket(LegacyContentRegistry.isDragonFireballEnabled(), LegacyContentRegistry.areWitheredCropsEnabled(), LegacyContentRegistry.isZombifyingEffectEnabled()));
+                return;
+            }
             TMOPacketHandler.INSTANCE.send(PacketDistributor.PLAYER.with(event::getPlayer), new SyncLegacyContentPacket(LegacyContentRegistry.isDragonFireballEnabled(), LegacyContentRegistry.areWitheredCropsEnabled(), LegacyContentRegistry.isZombifyingEffectEnabled()));
         }
 
