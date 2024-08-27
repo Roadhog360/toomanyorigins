@@ -1,10 +1,14 @@
 [A] Notes an Apugli related change.
 
+### Changes
+- Now compatible with all 1.19 versions up until 1.19.2.
+
 ### Bugfixes
 - Fixed crashes relating to the thunder breath effect cloud. ([#89](https://github.com/MerchantPug/toomanyorigins/issues/89))
 - [FABRIC] Fixed clientsided packets being left unregistered.
 - [FORGE] Fixed a /reload failure caused by TooManyOrigins.
 - [A] [FORGE] Fixed Calming Aura not functioning properly.
+- Fixed Legacy Withered datapack not being added.
 
 ### Dependencies
 - Updated Apugli to 2.6.7. This version's changelog can be read [here](https://github.com/MerchantPug/apugli/releases/tag/2.6.7%2B1.19.2)
