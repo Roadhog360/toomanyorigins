@@ -29,6 +29,7 @@ import net.minecraftforge.event.OnDatapackSyncEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -59,7 +60,8 @@ public class TooManyOriginsEventHandler {
             }
         }
 
-        @SubscribeEvent
+        // Before Calio Forge.
+        @SubscribeEvent(priority = EventPriority.HIGH)
         public static void addReloadListeners(AddReloadListenerEvent event) {
             event.addListener(new LegacyContentManager());
         }
