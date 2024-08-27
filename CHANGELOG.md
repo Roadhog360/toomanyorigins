@@ -3,6 +3,7 @@
 ### Bugfixes
 - [FABRIC] Fixed clientsided packets being left unregistered.
 - [FORGE] Fixed a /reload failure caused by TooManyOrigins.
+- [FORGE] Fixed Legacy Datapack content loading not running before power loading.
 - [A] [FORGE] Fixed Calming Aura not functioning properly.
 
 ### Dependencies
