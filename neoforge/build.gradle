@@ -30,7 +30,7 @@ jarJar.enable()
 repositories {
     maven {
         name = "Greenhouse"
-        url = 'https://maven.greenhouseteam.dev/releases/'
+        url = 'https://repo.greenhouse.house/releases/'
     }
 
     maven { url 'https://maven.theillusivec4.top' }
@@ -204,7 +204,7 @@ publishing {
     repositories {
         maven {
             name = "greenhouse"
-            url = "https://maven.greenhouseteam.dev/releases"
+            url = "https://repo.greenhouse.house/releases"
             credentials {
                 username System.getenv('MAVEN_USERNAME')
                 password System.getenv('MAVEN_PASSWORD')
