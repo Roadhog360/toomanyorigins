@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.merchantpug.toomanyorigins.client.particle.CustomDragonBreathParticle;
+import net.merchantpug.toomanyorigins.network.TMOPackets;
 import net.merchantpug.toomanyorigins.registry.TMOBlocks;
 import net.merchantpug.toomanyorigins.registry.TMOEntityTypes;
 import net.merchantpug.toomanyorigins.registry.TMOParticleTypes;
@@ -20,6 +21,8 @@ public class TooManyOriginsFabricClient implements ClientModInitializer {
     @Override
     @Environment(EnvType.CLIENT)
     public void onInitializeClient() {
+        TMOPackets.registerS2C();
+
         BlockRenderLayerMap.INSTANCE.putBlock(TMOBlocks.WITHERED_CROP.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(TMOBlocks.WITHERED_STEM.get(), RenderType.cutout());
 
