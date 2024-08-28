@@ -11,7 +11,7 @@ version = "${rootProject.version}+${minecraft_version}-common"
 repositories {
     maven {
         name = "Greenhouse"
-        url = 'https://repo.greenhouse.housesnapshots/'
+        url = 'https://repo.greenhouse.house/snapshots/'
     }
     maven {
         name = 'Sponge / Mixin'
@@ -72,7 +72,7 @@ publishing {
     repositories {
         maven {
             name = "greenhouse"
-            url = "https://repo.greenhouse.housereleases"
+            url = "https://repo.greenhouse.house/releases"
             credentials {
                 username System.getenv("MAVEN_USERNAME")
                 password System.getenv("MAVEN_PASSWORD")
