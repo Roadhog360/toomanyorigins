@@ -23,7 +23,7 @@ Please follow the guide from the [Origins Documentation](https://origins.readthe
 repositories {
     maven {
         name = "Greenhouse"
-        url = 'https://maven.greenhouseteam.dev/releases/'
+        url = 'https://repo.greenhouse.house/releases/'
     }
 }
 
