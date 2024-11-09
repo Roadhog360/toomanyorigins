@@ -1,5 +1,5 @@
 ### Bugfixes
-- [FABRIC] Fixed clientsided packets being left unregistered.
+- Fixed a crash exposed by Supplementaries to do with fluid hitbox code.
 
-### Dependencies
-- Updated Apugli to 2.10.3.
+### Miscellaneous
+- Removed Water Walking Fix and built in what it did.
